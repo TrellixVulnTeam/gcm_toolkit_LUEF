@@ -37,13 +37,14 @@ def m_read_raw(gcmt, gcm, data_path, iters='last', load_existing=False, tag=None
     # call the required GCM read-in method
     if gcm == 'MITgcm':
         wrt.write_status('STAT', 'Read in raw MITgcm data')
-        wrt.write_status('INFO', 'Tag: ' + tag)
         wrt.write_status('INFO', 'File path: ' + data_path)
         from GCMtools.exorad import m_read_from_mitgcm
 
         if tag is not None and load_existing:
+            wrt.write_status('INFO', 'Tag: ' + tag)
             loaded_ds = gcmt.get_models(tag)
         else:
+            wrt.write_status('INFO', 'Tag: None')
             loaded_ds = None
 
         ds = m_read_from_mitgcm(gcmt, data_path, iters, loaded_ds=loaded_ds, **kwargs)
