@@ -1,9 +1,13 @@
-# GCMtools
-> *GCMtools* is an open-source python package to read, post-process, and plot 3D GCM data. The goal is to have an easy to use invironment for new GCM users, while allowing for direct access to the data for more experienced users.
+# gcmt
+[![codecov](https://codecov.io/gh/exorad/gcmt/branch/main/graph/badge.svg?token=OTEPCHABXI)](https://codecov.io/gh/exorad/gcmt)
+[![PyPi version](https://badgen.net/pypi/v/pip/)](https://pypi.org/project/gcmt/)
+[![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](http://gcmt.readthedocs.io/?badge=latest)
 
-*GCMtools* originated from the need for a consistent and easy-to-share methodology for reading and analyzing the 3D circulation models of exoplanet atmospheres. Currently, the focus is on data produced by the [MITgcm](http://mitgcm.org/) and its implementations for exoplanets (see [Carone et al., 2020](https://ui.adsabs.harvard.edu/abs/2020MNRAS.496.3582C/abstract) and [Schneider et al., 2022](https://ui.adsabs.harvard.edu/abs/2022arXiv220209183S/abstract)). But we envision this package as a general tool for the analysis of data from different 3D GCMs.
+> *gcmt* is an open-source python package to read, post-process, and plot 3D GCM data. The goal is to have an easy to use invironment for new GCM users, while allowing for direct access to the data for more experienced users.
 
-*GCMtools* is currently under development. Feel free to contribute!
+*gcmt* originated from the need for a consistent and easy-to-share methodology for reading and analyzing the 3D circulation models of exoplanet atmospheres. Currently, the focus is on data produced by the [MITgcm](http://mitgcm.org/) and its implementations for exoplanets (see [Carone et al., 2020](https://ui.adsabs.harvard.edu/abs/2020MNRAS.496.3582C/abstract) and [Schneider et al., 2022](https://ui.adsabs.harvard.edu/abs/2022arXiv220209183S/abstract)). But we envision this package as a general tool for the analysis of data from different 3D GCMs.
+
+*gcmt* is currently under development. Feel free to contribute!
 
 ## Features (Current/Planned)
 
@@ -23,24 +27,26 @@
 
 ## Get Started
 
+Read the [docs](https://gcmt.readthedocs.io/en/latest/)
+
 ### Installation
 
-`git clone https://github.com/exorad/GCMtools`  
-
-`pip install -e <directory containing setup.py>`
+`pip install gcmt`
 
 ### Packages needed
+
+Please install the following packages beforehand:
 
 **general:**
 xarray, netcdf4
 
 **exPERT/MITgcm:**
-xmitgcm, xgcm, f90nml, 
-cubedsphere (see https://cubedsphere.readthedocs.io/en/latest/index.html)
+xmitgcm, xgcm, f90nml,
+[cubedsphere](https://cubedsphere.readthedocs.io/en/latest/index.html)
 
 ### Running the first example
 
-Even if you do not have GCM output data matching one of the supported models, you can still get started with *GCMtools* by loading pre-reduced datasets (in NetCDF format). Have a look at the example dataset `example_dataset.nc` and plot it with `python get_started.py`.
+Check the get started in the [docs](https://gcmt.readthedocs.io/en/latest/notebooks/demo.html)
 
 ## Miscellaneous Documentation
 
@@ -51,6 +57,6 @@ Even if you do not have GCM output data matching one of the supported models, yo
 
 ## Contact
 
-Feel free to contact one of the main authors: **Aaron Schneider**, **Sven Kiefer**, or **[Robin Baeyens](https://www.linkedin.com/in/robin-baeyens/)**.
+Feel free to contact one of the main authors: **[Aaron Schneider](https://aaron-schneider.de)**, **[Sven Kiefer](https://kiefersv.github.io/)**, or **[Robin Baeyens](https://www.linkedin.com/in/robin-baeyens/)**.
 
-Project url: https://github.com/exorad/GCMtools
+Project url: [https://github.com/exorad/gcmt](https://github.com/exorad/gcmt)
