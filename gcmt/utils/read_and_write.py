@@ -44,20 +44,12 @@ def m_read_raw(tools, gcm, data_path, iters='last', load_existing=False, tag=Non
         from ..exorad import m_read_from_mitgcm
 
         if tag is not None and load_existing:
-<<<<<<< HEAD:GCMtools/utils/read_and_write.py
-            wrt.write_status('INFO', 'Tag: ' + tag)
-            loaded_ds = gcmt.get_models(tag)
-        else:
-            wrt.write_status('INFO', 'Tag: None')
-            loaded_ds = None
-=======
             try:
                 loaded_dsi = tools.get_models(tag)
             except KeyError:
                 loaded_dsi = None
         else:
             loaded_dsi = None
->>>>>>> 748f7d30809ce399f70e225ec3c452c3ecef5c42:gcmt/utils/read_and_write.py
 
         dsi = m_read_from_mitgcm(tools, data_path, iters, loaded_dsi=loaded_dsi, **kwargs)
     else:
